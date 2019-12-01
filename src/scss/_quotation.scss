@@ -1,0 +1,54 @@
+.quotation_wrapper {
+    width: 70%;
+    margin: auto;
+    transform: translateY(0px);
+    @include centreItems(column);
+    @include pop-up;
+
+    @include media-custom(1300px) {
+        width: 95vw;
+    }
+
+    blockquote {
+        padding-top: 100px;
+        padding-bottom: 70px;
+        text-align: center;
+        font-size: 25px;
+        @include centreItems(column);
+
+        @include Xsmall_mobile {
+            font-size: 20px;
+        }
+
+        @include mobile {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        &::before {
+            font-family: Arial, Helvetica, sans-serif;
+            content: open-quote;
+            font-size: 150px;
+            line-height: 20%;
+        }
+
+        &::after {
+            content: "- Lorem Ipsum -";
+            font-size: 40px;
+            font-weight: 700;
+            margin-top: 40px;
+
+            @include media-custom (453px) {
+                font-size: 8vw;
+            }
+
+            @include media-custom (346px) {
+                font-size: 25px;
+            }
+
+            @include media-custom (322px) {
+                font-size: 22px;
+            }
+        }
+    }
+}

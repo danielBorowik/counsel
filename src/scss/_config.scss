@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin centreItems($direction) {
+    display: flex;
+    flex-flow: $direction;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+$colors: (
+    primary: #001c37,
+    primary--lighter: #002e5b,
+    secondary:#fde428,
+    accent: #f4f4f4,
+    light-grey: #333,
+);
+
+@mixin pop-up {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out,
+        scale 1s ease-in-out;
+}
+
+@mixin transition-ease($whatToAnimate) {
+    transition: $whatToAnimate 0.3s ease-in-out;
+}
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@mixin Xsmall_mobile {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin small_mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-custom($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
