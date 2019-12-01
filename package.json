@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Daniel Borowik",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielBorowik/counsel.git"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.7.4",
     "browser-sync": "^2.26.7",
